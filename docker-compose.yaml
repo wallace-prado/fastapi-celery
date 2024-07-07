@@ -10,9 +10,6 @@ services:
       - celery_worker
     ports:
       - "8000:8000"
-    environment:
-      - CELERY_BROKER_URL=redis://redis:6379/0
-      - CELERY_RESULT_BACKEND=redis://redis:6379/0
 
   redis:
     image: "redis:alpine"
@@ -28,6 +25,3 @@ services:
     command: celery -A app.celery_worker worker --loglevel=info
     depends_on:
       - redis
-    environment:
-      - CELERY_BROKER_URL=redis://redis:6379/0
-      - CELERY_RESULT_BACKEND=redis://redis:6379/0

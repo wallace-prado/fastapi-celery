@@ -1,4 +1,4 @@
-fastapi
-uvicorn
-celery
-redis
+fastapi # FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.6+ based on standard Python type hints.
+uvicorn # Uvicorn is a lightning-fast ASGI server implementation, using uvloop and httptools.
+celery # Celery is an asynchronous task queue/job queue based on distributed message passing.
+redis # Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache, and message broker.
